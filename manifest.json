@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Usage-Monitor",
+    "version": "1.0",
+    "description": "Use this extension to track usage of websites you visit!",
+    "icons": {
+        "128": "src/icons/128.png",
+        "48": "src/icons/48.png",
+        "32": "src/icons/32.png",
+        "16": "src/icons/16.png"
+    },
+    "browser_action": {
+        "default_icon": "src/icons/16.png"
+    }
+
+}
