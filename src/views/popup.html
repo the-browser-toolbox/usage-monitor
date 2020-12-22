@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usage Monitor</title>
-    <script src="../scripts/eventPage.js"></script>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+    <link rel="stylesheet" href="../styles/popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Usage Monitor</h1>
+      <h3>Track total time spent on each website</h3>
+    </header>
+    <section class="currentSite">
+      <h3>Current Site</h3>
+      <li class="siteStats">
+        <span class="hostname">devlopers.google.com</span>
+        <span class="timeSpent">23s</span>
+      </li>
+    </section>
+    <section class="mostUsedSites">
+      <h3>Most Used Sites</h3>
+      <ul class="list">
+        <li class="siteStats">
+          <span class="hostname">devlopers.google.com</span>
+          <span class="timeSpent">23s</span>
+        </li>
+        <li class="siteStats">
+          <span class="hostname">mozilla.com</span>
+          <span class="timeSpent">12s</span>
+        </li>
+        <li class="siteStats">
+          <span class="hostname">archive.org</span>
+          <span class="timeSpent">122s</span>
+        </li>
+      </ul>
+    </section>
+  </body>
 </html>
