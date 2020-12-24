@@ -20,6 +20,7 @@
     "scripts": ["src/scripts/background.js"],
     "persistence": false
   },
+  "options_page": "src/views/options.html",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
