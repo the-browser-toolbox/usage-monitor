@@ -17,7 +17,6 @@ let createListItem = (hostname, timeSpent) => {
 let createList = (usageStats) => {
   let list = document.querySelector("ul");
   const hosts = Object.keys(usageStats);
-  console.log(usageStats["archive.org"]);
   hosts.forEach((host) => {
     const timeSpent = display(usageStats[host]);
     const hostEntry = createListItem(host, timeSpent);

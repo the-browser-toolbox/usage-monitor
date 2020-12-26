@@ -6,3 +6,5 @@ async function generateList() {
   createList(a.usageData);
 }
 generateList();
+// update page every 10 seconds
+setInterval(generateList, 10000);
