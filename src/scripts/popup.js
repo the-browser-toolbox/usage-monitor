@@ -1,9 +1,13 @@
 import getUsageStats from "./utils/getUsageStats.js";
 import { createList, createListItem } from "./utils/updateDom.js";
+import getTimeString from "./utils/time.js";
 
 function updateMostVisitedSites(stats) {
   let timeSpentValues = Object.values(stats);
-  const topTimeSpentValues = timeSpentValues.sort().slice(0, 5);
+  timeSpentValues.sort(function (a, b) {
+    return a - b;
+  });
+  let topTimeSpentValues = timeSpentValues.reverse().slice(0, 5);
   let topStats = {};
 
   for (let i in topTimeSpentValues) {
@@ -29,7 +33,10 @@ function updateCurrentSite(stats) {
         .replace("http://", "")
         .replace("https://", "")
         .split(/[/?#]/)[0];
-      let currentSite = createListItem(hostname, stats[hostname]);
+      let currentSite = createListItem(
+        hostname,
+        getTimeString(stats[hostname])
+      );
       let currentSiteSpan = document.querySelector("#currentSite");
       currentSiteSpan.innerHTML = "";
       currentSiteSpan.appendChild(currentSite);
@@ -43,5 +50,5 @@ async function updatePage() {
   updateCurrentSite(stats);
 }
 updatePage();
-// update page every 10 seconds
-setInterval(updatePage, 10000);
+// update page every 3 seconds
+setInterval(updatePage, 3000);

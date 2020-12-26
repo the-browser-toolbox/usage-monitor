@@ -5,7 +5,7 @@ for ex :
 3664s as 1h 1m 4s
 */
 
-function display(timeSpent) {
+function getTimeString(timeSpent) {
   if (timeSpent < 60) {
     return `${timeSpent}s`;
   } else if (timeSpent < 3600) {
@@ -20,4 +20,4 @@ function display(timeSpent) {
   }
 }
 
-export default display;
+export default getTimeString;

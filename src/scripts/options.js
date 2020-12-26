@@ -6,14 +6,15 @@ async function generateList() {
   createList(a.usageData);
 }
 generateList();
-// update page every 10 seconds
-setInterval(generateList, 10000);
+// update page every 1 seconds
+setInterval(generateList, 1000);
 
 // reset button
 
 const resetBtn = document.querySelector("#resetBtn");
 resetBtn.addEventListener("click", () => {
   chrome.storage.sync.set({ usageData: {} }, function () {
-    alert("data reset successful!");
+    alert("data reset successful! updating page in few seconds automatically");
+    generateList();
   });
 });

@@ -1,4 +1,4 @@
-import display from "./time.js";
+import getTimeString from "./time.js";
 let createListItem = (hostname, timeSpent) => {
   if (!hostname) return;
   let listItem = document.createElement("li");
@@ -17,9 +17,10 @@ let createListItem = (hostname, timeSpent) => {
 };
 let createList = (usageStats) => {
   let list = document.querySelector("ul");
+  list.innerHTML = "";
   const hosts = Object.keys(usageStats);
   hosts.forEach((host) => {
-    const timeSpent = display(usageStats[host]);
+    const timeSpent = getTimeString(usageStats[host]);
     const hostEntry = createListItem(host, timeSpent);
     list.appendChild(hostEntry);
   });
