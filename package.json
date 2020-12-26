@@ -1,0 +1,40 @@
+{
+    "name": "usage-monitor",
+    "version": "1.0.0",
+    "description": "track time spent across sites you visit",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint src/scripts/**/*.js",
+        "prettier": "prettier-check src/scripts/**/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/the-browser-toolbox/usage-monitor.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/the-browser-toolbox/usage-monitor/issues"
+    },
+    "homepage": "https://github.com/the-browser-toolbox/usage-monitor#readme",
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.15.0",
+        "eslint-config-prettier": "^7.0.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.2.0",
+        "husky": "^4.3.4",
+        "lint-staged": "^10.5.3",
+        "prettier": "^2.2.1",
+        "prettier-check": "^2.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "eslint --fix"
+        ]
+    }
+}
