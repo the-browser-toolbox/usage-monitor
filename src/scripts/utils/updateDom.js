@@ -1,5 +1,6 @@
 import display from "./time.js";
 let createListItem = (hostname, timeSpent) => {
+  if (!hostname) return;
   let listItem = document.createElement("li");
   listItem.classList.add("siteStats");
 
