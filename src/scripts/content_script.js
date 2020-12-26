@@ -5,9 +5,9 @@ let start = Date.now();
 let stop = null;
 let timeSpent = null;
 
-const saveAfter = 60 * 1000;
+const saveAfter = 3 * 1000;
 
-//save data every 60 second incase crash or anything unexpected happens
+//save data every 3 second incase crash or anything unexpected happens
 setInterval(function () {
   if (document.visibilityState === "visible") {
     updateTimeSpent();

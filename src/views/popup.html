@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usage Monitor</title>
-    <script src="../scripts/eventPage.js"></script>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Usage Monitor</h1>
+      <h3>Track total time spent on each website</h3>
+    </header>
+    <section class="currentSite">
+      <h3>Current Site</h3>
+      <div id="currentSite">
+        <li class="siteStats">
+          <span class="hostname">dummyCurrentSite.com</span>
+          <span class="timeSpent">23s</span>
+        </li>
+        <span></span>
+      </div>
+    </section>
+    <section class="mostUsedSites">
+      <h3>Most Used Sites</h3>
+      <ul class="list">
+        <!-- sites will be added here dynamically by js-->
+      </ul>
+      <p>
+        visit <a href="options.html" target="_blank">options page</a> to reset
+        and view full data
+      </p>
+    </section>
+    <script type="module" src="../scripts/popup.js"></script>
+  </body>
 </html>

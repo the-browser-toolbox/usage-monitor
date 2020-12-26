@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Kreon:wght@600&family=Montserrat:wght@300;400;700&display=swap");
+
+/*****************************Section Styles**************/
+section {
+  margin: 14px 0;
+}
+
+.currentSite {
+  width: 20rem;
+  position: relative;
+}
+.currentSite li {
+  background-color: #9999a8;
+}
