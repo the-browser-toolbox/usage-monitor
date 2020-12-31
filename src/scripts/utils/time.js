@@ -6,18 +6,18 @@ for ex :
 */
 
 function getTimeString(timeSpent) {
-  if (timeSpent < 60) {
-    return `${timeSpent}s`;
-  } else if (timeSpent < 3600) {
-    const minutes = Math.floor(timeSpent / 60);
-    const seconds = Math.floor(timeSpent % 60);
-    return `${minutes}m ${seconds}s`;
-  } else {
-    const hours = Math.floor(timeSpent / 3600);
-    const minutes = Math.floor((timeSpent % 3600) / 60);
-    const seconds = Math.floor(timeSpent % 60);
-    return `${hours}h ${minutes}m ${seconds}s`;
-  }
+    if (timeSpent < 60) {
+        return `${timeSpent}s`
+    } else if (timeSpent < 3600) {
+        const minutes = Math.floor(timeSpent / 60)
+        const seconds = Math.floor(timeSpent % 60)
+        return `${minutes}m ${seconds}s`
+    } else {
+        const hours = Math.floor(timeSpent / 3600)
+        const minutes = Math.floor((timeSpent % 3600) / 60)
+        const seconds = Math.floor(timeSpent % 60)
+        return `${hours}h ${minutes}m ${seconds}s`
+    }
 }
 
-export default getTimeString;
+export default getTimeString

@@ -1,8 +1,7 @@
 // listen for message from content script
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.task === "updateUsageData")
-    handleUpdateUsageData(request.hostname, request.timeSpent);
-});
+    if (request.task === 'updateUsageData') handleUpdateUsageData(request.hostname, request.timeSpent)
+})
 
 /*
 extension will be storing data in chrome storage 
@@ -16,16 +15,16 @@ usageData = {
 */
 
 function handleUpdateUsageData(hostname, timeSpent) {
-  chrome.storage.sync.get(["usageData"], function (result) {
-    let usageData = result.usageData;
-    // if usageData or usageData[hostname] doesn't exist
-    if (usageData === undefined) usageData = {};
-    if (usageData[hostname] === undefined) usageData[hostname] = 0;
+    chrome.storage.sync.get(['usageData'], function (result) {
+        let usageData = result.usageData
+        // if usageData or usageData[hostname] doesn't exist
+        if (usageData === undefined) usageData = {}
+        if (usageData[hostname] === undefined) usageData[hostname] = 0
 
-    usageData[hostname] += timeSpent;
+        usageData[hostname] += timeSpent
 
-    chrome.storage.sync.set({ usageData: usageData }, function () {
-      console.log("updated data is: ", usageData);
-    });
-  });
+        chrome.storage.sync.set({ usageData: usageData }, function () {
+            console.log('updated data is: ', usageData)
+        })
+    })
 }
