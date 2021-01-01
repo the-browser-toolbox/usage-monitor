@@ -5,26 +5,26 @@
   "description": "Use this extension to track usage of websites you visit!",
 
   "icons": {
-    "128": "src/icons/128.png",
-    "48": "src/icons/48.png",
-    "32": "src/icons/32.png",
-    "16": "src/icons/16.png"
+    "128": "./icons/128.png",
+    "48": "./icons/48.png",
+    "32": "./icons/32.png",
+    "16": "./icons/16.png"
   },
 
   "browser_action": {
-    "default_icon": "src/icons/16.png",
-    "default_popup": "src/views/popup.html"
+    "default_icon": "./icons/16.png",
+    "default_popup": "./views/popup.html"
   },
 
   "background": {
-    "scripts": ["src/scripts/background.js"],
+    "scripts": ["./scripts/background.js"],
     "persistence": false
   },
-  "options_page": "src/views/options.html",
+  "options_page": "./views/options.html",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/scripts/content_script.js"]
+      "js": ["./scripts/content_script.js"]
     }
   ],
   "permissions": ["tabs", "storage"]
