@@ -1,14 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Kreon:wght@600&family=Montserrat:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Kreon:wght@600&family=Montserrat:wght@300;400;700&display=swap');
 
 /*****************************Section Styles**************/
-section {
-  margin: 14px 0;
+body {
+    font-size: 0.5rem;
+    width: 350px;
+    min-height: 400px;
+    background-color: rgba(6, 7, 7, 0.815);
 }
 
-.currentSite {
-  width: 20rem;
-  position: relative;
+header {
+    position: relative;
 }
-.currentSite li {
-  background-color: #9999a8;
+header h1 {
+    display: flex;
+    justify-content: center;
+    padding: 0.3em 0;
+    box-shadow: 2px 0px 10px #171717;
+    font-size: 1.5rem;
+}
+header h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    padding-left: 0.2em;
+    margin-top: 5px;
+}
+header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.8em;
+}
+header .option {
+    position: absolute;
+    font-size: 3em;
+    color: #fff;
+    top: 0;
+    right: 0;
+    padding: 0.4em;
+}
+section {
+    margin-top: 0.7em;
+}
+section h3 {
+    margin-bottom: 0.5em;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.currentSite {
+    position: relative;
+    font-size: 1.1rem;
+    padding: 0 0.5em;
+}
+.currentSite div {
+    padding: 0.5em 0.8em;
+    background-color: #171717;
+}
+.currentSite .siteStats {
+    font-size: 0.9rem;
+}
+.siteStats .timeSpent {
+    padding-right: 1em;
+    position: absolute;
+    right: 0;
+}
+.mostUsedSites {
+    position: relative;
+    font-size: 1.1rem;
+}
+.mostUsedSites ul {
+    padding: 0 0.5em;
+}
+.mostUsedSites .siteStats {
+    padding: 0 0.8em;
+    background-color: #171717;
+    line-height: 2em;
+    font-size: 0.9rem;
+}
+footer p {
+    padding: 0.8em 0.8em;
+    font-size: 0.9rem;
+    color: rgb(128, 118, 118);
 }

@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usage Monitor</title>
-    <link rel="stylesheet" href="../styles/common.css" />
-    <link rel="stylesheet" href="../styles/popup.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Usage Monitor</h1>
-      <h3>Track total time spent on each website</h3>
-    </header>
-    <section class="currentSite">
-      <h3>Current Site</h3>
-      <div id="currentSite">
-        <li class="siteStats">
-          <span class="hostname">dummyCurrentSite.com</span>
-          <span class="timeSpent">23s</span>
-        </li>
-        <span></span>
-      </div>
-    </section>
-    <section class="mostUsedSites">
-      <h3>Most Used Sites</h3>
-      <ul class="list">
-        <!-- sites will be added here dynamically by js-->
-      </ul>
-      <p>
-        visit <a href="options.html" target="_blank">options page</a> to reset
-        and view full data
-      </p>
-    </section>
-    <script type="module" src="../scripts/popup.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Usage Monitor</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="../styles/common.css" />
+        <link rel="stylesheet" href="../styles/popup.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Usage Monitor</h1>
+            <h3>Track total time spent on each website</h3>
+            <img src="../icons/32.png" alt="" />
+            <a class="option" href="options.html" target="_blank">
+                <i class="fas fa-cog"></i>
+            </a>
+        </header>
+        <section class="currentSite">
+            <h3>Current Site</h3>
+            <div id="currentSite">
+                <li class="siteStats">
+                    <span class="hostname">dummyCurrentSite.com</span>
+                    <span class="timeSpent">23s</span>
+                </li>
+                <span></span>
+            </div>
+        </section>
+        <section class="mostUsedSites">
+            <h3>Most Used Sites</h3>
+            <ul class="list">
+                <!-- sites will be added here dynamically by js-->
+            </ul>
+        </section>
+        <footer>
+            <p>Visit the <a href="options.html" target="_blank">options page</a> to reset and view full data.</p>
+        </footer>
+        <script type="module" src="../scripts/popup.js"></script>
+    </body>
 </html>
