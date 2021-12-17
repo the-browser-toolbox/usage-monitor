@@ -28,12 +28,15 @@ Include specific tasks in the order they need to be done in. Include links to sp
 
 
 **Current behavior:**
+
  Describe how the current project manifests. 
 
 **Expected behavior:**
+
 Describe what the behavior would be with the feature. 
 
 **Related code:**
+
 
 If you are able to illustrate the feature request with an example, please provide a sample application
 
