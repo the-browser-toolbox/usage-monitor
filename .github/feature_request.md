@@ -39,4 +39,4 @@ If you are able to illustrate the feature request with an example, please provid
 
 insert short code snippets here -->
 
- **Remember to use helpful labels and milestones. 
+ **Remember to use helpful labels and milestones.**
